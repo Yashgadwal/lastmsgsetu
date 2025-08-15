@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "MCQ Answer Helper",
+  "description": "This extension helps you get answers for multiple-choice questions.",
+  "version": "1.0",
+  "permissions": [
+    "activeTab"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  }
+}
